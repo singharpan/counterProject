@@ -19,7 +19,7 @@ class Second extends Component {
     return (
       <div>
         <button onClick={this.handleAdd}>Add to Cart</button>
-        <button onClick={this.handleRemove}>Remove</button>
+        <button onClick={this.handleRemove}>Remove </button>
         <button onClick={() => this.props.onDelete(this.props.id)}>
           Delete
         </button>
