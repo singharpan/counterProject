@@ -21,7 +21,7 @@ class Main extends Component {
   render() {
     return (
       <div>
-        <h1>This is Addtion and Deletion</h1>
+        <h1>Add to Cart or Remove from Cart</h1>
         {this.state.counters.map((count) => (
           <Second
             key={count.id}
