@@ -1,29 +1,27 @@
 import React, { Component } from "react";
 
 class Second extends Component {
-  state = {
-    count: this.props.value,
-  };
-
-  handleAdd = () => {
-    this.setState({
-      count: this.state.count + 1,
-    });
-  };
-  handleRemove = () => {
-    this.setState({
-      count: this.state.count - 1,
-    });
-  };
   render() {
     return (
       <div>
-        <button onClick={this.handleAdd}>Add to Cart</button>
-        <button onClick={this.handleRemove}>Remove</button>
-        <button onClick={() => this.props.onDelete(this.props.id)}>
+        <button
+          onClick={() => {
+            this.props.onIncrement(this.props.count);
+          }}
+        >
+          Add to Cart
+        </button>
+        <button
+          onClick={() => {
+            this.props.onRemove(this.props.count);
+          }}
+        >
+          Remove
+        </button>
+        <button onClick={() => this.props.onDelete(this.props.count.id)}>
           Delete
         </button>
-        <h1>Count:{this.state.count}</h1>
+        <h1>Count:{this.props.count.value}</h1>
       </div>
     );
   }
