@@ -35,8 +35,9 @@ class Main extends Component {
         {this.state.counters.map((count) => (
           <Second
             key={count.id}
-            id={count.id}
-            value={count.value}
+            // id={count.id}
+            // value={count.value}
+            count={count}
             onDelete={this.handleDelete}
           />
         ))}

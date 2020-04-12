@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 class Second extends Component {
   state = {
-    count: this.props.value,
+    count: this.props.count.value,
   };
 
   handleAdd = () => {
@@ -20,7 +20,7 @@ class Second extends Component {
       <div>
         <button onClick={this.handleAdd}>Add to Cart</button>
         <button onClick={this.handleRemove}>Remove </button>
-        <button onClick={() => this.props.onDelete(this.props.id)}>
+        <button onClick={() => this.props.onDelete(this.props.count.id)}>
           Delete
         </button>
         <h1>Count:{this.state.count}</h1>
